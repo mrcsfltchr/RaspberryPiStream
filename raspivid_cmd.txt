@@ -1,0 +1,15 @@
+run this command in the terminal in its most basic form:
+
+	raspivid  -o - -t 0 -hf -w 640 -h 360 -fps 25 -l tcp://PI-IP_ADDRESS:PORT
+
+raspivid automatically connects to the rasberry pi camera interface if it is enabled
+
+-o sets the output of the captured video. '-' references standard output i.e. the screen
+
+-hf flips the image horizontally before sending to output
+
+-w, -h are the dimensions of the image in pixels
+
+-l option sets the raspberry pi server to listen for connections to its port
+
+for more options, e.g. size of roi or codec to use. go to https://www.raspberrypi.org/documentation/raspbian/applications/camera.md
